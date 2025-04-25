@@ -1,0 +1,1 @@
+This repository contains basic, intermediate and advance Java Script exercises for the goal of practice and getting more aquainted with Java Script.
