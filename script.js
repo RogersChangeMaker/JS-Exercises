@@ -30,3 +30,31 @@ console.log("The division of " + num1 + " and " + num2 + " is " + (num1 / num2))
 
 
 
+var y = 10, z = '10';
+console.log(y===z)  
+console.log(y !== z)
+console.log(y < z);
+console.log(y > z);
+
+
+
+function canDrive(age) {
+  if (age >= 21) {
+    return true;
+  } 
+  else {
+    return false;
+  }
+}
+
+console.log(canDrive(28)); // true
+console.log(canDrive(20)); // false
+
+
+
+
+
+
+
+
+
