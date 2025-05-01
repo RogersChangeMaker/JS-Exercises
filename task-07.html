@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Task: Create a function that takes a name and returns a greeting.
+Hint: function greet(name) { return ... }
+Stretch Task: Add a second parameter for time of day, e.g. 'Good morning, John!' -->
+    
+<script>
+    function greet(name) {
+  return "Hello," + name + ", hope you are having a blessed day";
+}
+console.log(greet("Rogers"));
+console.log(greet("Junior"));
+
+function greet(fullName) {
+    // let fName = Bruce;
+    // let lName = Wayne;
+//   let fullName = fName + lName;
+
+  let currentHour = new Date().getHours();
+  let greeting;
+
+  if (currentHour < 12) {
+    greeting = "Good morning";
+  } else if (currentHour < 18) {
+    greeting = "Good afternoon";
+  } else {
+    greeting = "Good evening";
+  }
+
+  return greeting, fullName;
+}
+
+console.log(greet(fullName));
+</script>
+
+</body>
+</html>
