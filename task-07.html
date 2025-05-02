@@ -17,26 +17,33 @@ Stretch Task: Add a second parameter for time of day, e.g. 'Good morning, John!'
 console.log(greet("Rogers"));
 console.log(greet("Junior"));
 
-function greet(fullName) {
-    // let fName = Bruce;
-    // let lName = Wayne;
-//   let fullName = fName + lName;
+   
 
-  let currentHour = new Date().getHours();
-  let greeting;
+// OR YOU CAN USE THE FOLLOWING METHODS
 
-  if (currentHour < 12) {
-    greeting = "Good morning";
-  } else if (currentHour < 18) {
-    greeting = "Good afternoon";
-  } else {
-    greeting = "Good evening";
+const date = new Date();
+const dateHour = date.getHours()
+
+
+const iGreet = function(providedName, hour){
+  
+  if (hour >= 0 && hour <12) {
+    return `Good morning ${providedName}`
   }
-
-  return greeting, fullName;
+  else if (hour >= 12 && hour <18) {
+    return `Good fternoon ${providedName}`
+  }
+  else if (hour >= 18 && hour <24) {
+    return `Good evening ${providedName}`
+  }
+  else {
+    return console.error('Invalid Hour')
+  }
 }
+console.log(iGreet('Maureen', 11))
 
-console.log(greet(fullName));
+
+
 </script>
 
 </body>
