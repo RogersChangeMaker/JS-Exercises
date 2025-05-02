@@ -1,32 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 10</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Task: Create an object for a person with name, age, and location.
 Hint: Use {} to define an object.
 Stretch Task: Add a method sayHello() to the object that returns 'Hi, I'm [name] from [location]'. -->
-    
-<script>
-    let person = {
-  name: "Wase",
-  age: 41,
-  location: "Philippines",
-};
-console.log(person);
 
-//   Hello: function(){
-//     return (`Hi, I am ${this.name}, ${this.age} years old, from ${this.location};
-// }`);
+    <script>
+      const person = {
+        name: "Wase",
+        age: 41,
+        location: "Philippines",
 
-console.log(person);
+        sayHello: function () {
+          return `Hi, I am ${this.name} from ${this.location}. I am ${this.age} years old`;
+        },
+      };
+      console.log(person.sayHello());
 
-</script>
+      //   Hello: function(){
+      //     return (`Hi, I am ${this.name}, ${this.age} years old, from ${this.location};
+      // }`);
 
-</body>
+      console.log(person);
+    </script>
+  </body>
 </html>
