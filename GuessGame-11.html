@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guessing Game</title>
+    <style>
+      body {
+        background-color: #f0f8ff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 100px;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Guess a Number!</h1>
+    <button onclick="playGame()">Play</button>
+
+    <script>
+      function playGame() {
+        const secretNumber = Math.floor(Math.random() * 10) + 1;
+        const guess = prompt("Guess a number between 1 and 10:");
+
+        if (parseInt(guess) === secretNumber) {
+          alert("Correct! You guessed the number.");
+        } else {
+          alert("Wrong! The number was " + secretNumber);
+        }
+      }
+    </script>
+  </body>
+</html>
