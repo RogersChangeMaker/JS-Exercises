@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Functions</h1>
+<h2>setTimeout() with a Callback</h2>
+
+<p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+<h1 id="demo"></h1>
+
+<script>
+setTimeout(myFunction, 3000);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "I love You !!";
+}
+</script>
+
+<!-- using either of these two methods produce the same result (I love You) -->
+<script>
+    setTimeout(function() { myFunction("I love You !!!"); }, 3000);
+    
+    function myFunction(value) {
+      document.getElementById("demo").innerHTML = value;
+    }
+    </script>
+    
+</body>
+</html>
